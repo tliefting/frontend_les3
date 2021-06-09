@@ -1,1 +1,62 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: #fefae0;
+    color: white;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 240px 100px auto 50px;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-areas:
+            "header-links-boven header-rechts-boven header-rechts-boven"
+            "content-links header-rechts-boven header-rechts-boven"
+            "content-links content-midden content-rechts"
+            "content-links content-midden ."
+            "footer-balk footer-balk footer-balk";
+}
+#item-a {
+    background-color: #264653;
+    grid-area: header-links-boven;
+    height: 50px;
+}
+#item-b {
+    background-color: #2a9d8f;
+    grid-area: content-links;
+}
+#item-c {
+    background-color: #e9c46a;
+    grid-area: header-rechts-boven;
+    height: 240px;
+}
+#item-d {
+    background-color: #f4a261;
+    grid-area: content-rechts;
+    height: 100px;
+}
+#item-e {
+    background-color: #e76f51;
+    grid-area: content-midden;
+}
+#item-f {
+    background-color: #ba2b09;
+    grid-area: footer-balk;
+    height: 50px;
+}
+
+    @media screen and (max-width:576px) {
+        .container {
+            grid-template-columns: 1fr;
+            column-gap: 5px;
+            row-gap: 5px;
+            grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+            grid-template-areas:
+                    "header-links-boven "
+                    "content-links"
+                    "header-rechts-boven"
+                    "content-rechts"
+                    "content-midden"
+                    "."
+                    "footer-balk";
+        }
+    }
