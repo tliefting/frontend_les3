@@ -18,7 +18,7 @@
 #item-a {
     background-color: #264653;
     grid-area: header-links-boven;
-    height: 50px;
+
 }
 #item-b {
     background-color: #2a9d8f;
@@ -27,7 +27,7 @@
 #item-c {
     background-color: #e9c46a;
     grid-area: header-rechts-boven;
-    height: 240px;
+
 }
 #item-d {
     background-color: #f4a261;
@@ -41,7 +41,6 @@
 #item-f {
     background-color: #ba2b09;
     grid-area: footer-balk;
-    height: 50px;
 }
 
     @media screen and (max-width:576px) {
